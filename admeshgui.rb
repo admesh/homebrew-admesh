@@ -10,7 +10,7 @@ class Admeshgui < Formula
   depends_on "gettext"
 
   def install
-    system "qmake", "LIBS+=-L#{HOMEBREW_PREFIX}/Cellar/admesh/0.98.1/lib -L#{HOMEBREW_PREFIX}/Cellar/stlsplit/1.1/lib -L#{HOMEBREW_PREFIX}/opt/gettext/lib", "QMAKE_CXXFLAGS+=-I#{HOMEBREW_PREFIX}/opt/gettext/include"
+    system "qmake", "LIBS+=-L#{HOMEBREW_PREFIX}/opt/admesh/lib -L#{HOMEBREW_PREFIX}/opt/stlsplit/lib -L#{HOMEBREW_PREFIX}/opt/gettext/lib", "QMAKE_CXXFLAGS+=-I#{HOMEBREW_PREFIX}/opt/gettext/include"
     system "make"
     bin.install "admeshgui.app/Contents/MacOS/admeshgui"
   end
