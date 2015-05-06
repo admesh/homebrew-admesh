@@ -12,8 +12,9 @@ class Admeshgui < Formula
   def install
     system "qmake"
     system "make"
-    system "ln", "-s", "../ADMeshGUI.app/Contents/MacOS/ADMeshGUI", "admeshgui"
     prefix.install "ADMeshGUI.app"
+    mv "brewrun.sh", "admeshgui"
+    system "chmod", "+x", "admeshgui"
     bin.install "admeshgui"
   end
 
