@@ -13,7 +13,7 @@ class Admeshgui < Formula
     system "qmake"
     system "make"
     prefix.install "ADMeshGUI.app"
-    mv "brewrun.sh", "admeshgui"
+    mv "Distribution/brewrun.sh", "admeshgui"
     system "chmod", "+x", "admeshgui"
     bin.install "admeshgui"
   end
